@@ -93,8 +93,6 @@ while playing:
 
     main_display.blit(player, player_rect)
 
-    print(len(enemies))
-
     pygame.display.flip()
 
     for enemy in enemies:
@@ -102,5 +100,5 @@ while playing:
             enemies.pop(enemies.index(enemy))
 
     for bonus in bonuses:
-        if bonus[1].left < 0:
+        if bonus[1].bottom > HEIGHT:
             bonuses.pop(bonuses.index(bonus))
